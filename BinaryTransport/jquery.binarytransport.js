@@ -29,6 +29,10 @@
                         username = options.username || null,
                         password = options.password || null;
 
+                    if (options.onprogress) {
+                        xhr.onprogress = options.onprogress;
+                    }
+
                     this.xhr = xhr;
 
                     xhr.addEventListener('load', function() {
